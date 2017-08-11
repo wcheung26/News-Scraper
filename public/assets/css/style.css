@@ -1,0 +1,39 @@
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.newsBox {
+  height: 100px;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+.commentField {
+	margin-top: 10px;
+}
+
+.commentBox {
+	margin-bottom: 15px;
+}
+
+.viewComments a {
+	text-decoration: none;
+	color: black;
+}
+
+.comments {
+	margin-right: 10px;
+}
+
+form {
+  display: none;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+
+}
