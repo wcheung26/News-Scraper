@@ -125,6 +125,25 @@ router.post("/articles/:id", function(req, res) {
   });
 });
 
+router.delete("/articles/:id/comments/:cid", function(req, res) {
+  var id = req.params.id;
+  var cid = req.params.cid;
+  Note.findByIdAndRemove(cid, function(error, note) {
+    if (error) {
+      res.send(error)
+    } else {
+      Article.findOneAndUpdate({ _id: id}, {$pull: { "note": cid}}, function(err, newDoc) {
+        if (error) {
+          res.send(error);
+        } else {
+          console.log("Note deleted!", note);
+          res.redirect("/articles/" + id);
+        }
+      });
+    }
+  })
+})
+
 
 
 module.exports = router;
