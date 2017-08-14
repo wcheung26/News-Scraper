@@ -30,9 +30,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Database configuration with mongoose
 if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true});
+  mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
 } else {
-  mongoose.connect("mongodb://localhost/news-scraper", { useMongoClient: true);
+  mongoose.connect("mongodb://localhost/news-scraper", { useMongoClient: true });
 }
 
 // Mongoose configuration for Heroku
