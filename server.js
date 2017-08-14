@@ -28,9 +28,14 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/news-scraper");
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect("mongodb://localhost/news-scraper");
+}
+
 // Mongoose configuration for Heroku
-// mongoose.connect("mongodb://heroku_rwfrvw0t:ltn6des66npp2ljf477dtccps3@ds055626.mlab.com:55626/heroku_rwfrvw0t");
+  // mongoose.connect("mongodb://heroku_rwfrvw0t:ltn6des66npp2ljf477dtccps3@ds055626.mlab.com:55626/heroku_rwfrvw0t");
 
 var db = mongoose.connection;
 
