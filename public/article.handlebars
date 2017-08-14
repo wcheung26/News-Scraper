@@ -8,7 +8,7 @@
 		<ul class="list-group" id="{{_id}}">
 			{{#each note}}
 				<li class="list-group-item commentBox">
-					<h4>{{this.title}} <span class="small"> {{this.username}}</span></h4>
+					<h4>{{this.title}} <span class="small"> by {{this.username}}</span></h4>
 					<p>{{this.body}}</p>
 					<a href="/articles/{{../_id}}" role="button" class="delete" id="{{this._id}}">Remove</a>
 				</li>

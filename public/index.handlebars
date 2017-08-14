@@ -22,8 +22,9 @@
 				</p>
 				<form action="/articles/{{this._id}}" method="POST">
 					<div class="form-group">
+						<input type="text" class="form-control" name="username" placeholder="Username">
 						<input type="text" class="form-control" name="title" placeholder="Subject">
-						<textarea class="form-control commentField" name="body" rows="5" placeholder="New comment..."></textarea> <br>
+						<textarea class="form-control commentField" name="body" rows="3" placeholder="New comment..."></textarea>
 						<button class="btn btn-primary saveButton">Save</button> <span class="showSaved"></span>
 					</div>
 				</form>

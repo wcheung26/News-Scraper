@@ -11,8 +11,8 @@
   padding-bottom: auto;
 }
 
-.commentField {
-	margin-top: 10px;
+input, .commentField {
+	margin-top: 5px;
 }
 
 .commentBox {
@@ -28,12 +28,16 @@
 	margin-right: 10px;
 }
 
+.saveButton {
+	margin-top: 5px;
+}
+
 form {
   display: none;
 }
 
 textarea {
   resize: none;
-  height: 150px;
+  /*height: 100px;*/
 
 }
